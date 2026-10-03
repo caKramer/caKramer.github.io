@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CK - Portfolio</title>
+    <title>CK - Principal Engineer & Data Scientist</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -11,7 +11,10 @@
             --border-color: #30363d;
             --text-primary: #c9d1d9;
             --text-heading: #ffffff;
+            --text-muted: #8b949e;
             --accent-color: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-purple: #bc8cff;
             --tag-bg: #1f242d;
         }
 
@@ -27,7 +30,7 @@
         }
 
         .container {
-            max-width: 700px;
+            max-width: 780px;
             width: 100%;
         }
 
@@ -40,17 +43,41 @@
         h1 {
             color: var(--text-heading);
             font-size: 2.2rem;
-            margin: 0 0 0.5rem 0;
+            margin: 0 0 0.3rem 0;
         }
 
         .subtitle {
             font-size: 1.1rem;
             color: var(--accent-color);
             font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.8rem;
+        }
+
+        .stat-badge {
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .stat-badge.green {
+            background: rgba(63, 185, 80, 0.1);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         h2 {
@@ -61,27 +88,110 @@
             margin-bottom: 1rem;
         }
 
+        .about-text {
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            color: var(--text-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .project-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .project-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .project-badge {
+            font-size: 0.75rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 12px;
+            background-color: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            color: var(--accent-purple);
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        /* Skills Matrix */
+        .skills-group {
+            margin-bottom: 1rem;
+        }
+
+        .skills-group-title {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
         .skills-list {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .skill-tag {
             background-color: var(--tag-bg);
             border: 1px solid var(--border-color);
             color: var(--text-primary);
-            padding: 0.4rem 0.8rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        .skill-tag.highlight {
+            border-color: var(--accent-color);
         }
 
         .links a {
             color: var(--accent-color);
             text-decoration: none;
             margin-right: 1.5rem;
+            font-weight: 500;
         }
 
         .links a:hover {
@@ -94,26 +204,101 @@
     <div class="container">
         <header>
             <h1>CK</h1>
-            <div class="subtitle">Software Engineer | Data Scientist | Program Manager</div>
+            <div class="subtitle">Technical Lead | Data Scientist | System Architect</div>
+            <div class="hero-stats">
+                <span class="stat-badge">14+ Years Experience</span>
+                <span class="stat-badge green">Enterprise Architecture & IAM</span>
+                <span class="stat-badge">M.S. Data Science Candidate</span>
+            </div>
         </header>
 
         <section>
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li class="skill-tag">Java</li>
-                <li class="skill-tag">Angular</li>
-                <li class="skill-tag">Ontologies</li>
-                <li class="skill-tag">Architecture Design</li>
-                <li class="skill-tag">Cloud Deployments</li>
-                <li class="skill-tag">Program Management</li>
-            </ul>
+            <h2>About</h2>
+            <p class="about-text">
+                Technologist with 14 years of experience spanning software engineering, system architecture, data science, and program leadership. Specialized in high-scale cloud architectures, Identity & Access Management (IAM), semantic ontologies, and advanced predictive modeling.
+            </p>
+        </section>
+
+        <section>
+            <h2>Featured Work & Research</h2>
+
+            <!-- Featured Capstone Project -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">
+                        <a href="https://github.com/cakKramer" target="_blank">Labor Market Synthetic Data Leakage & Diagnostic Audit</a>
+                    </h3>
+                    <span class="project-badge">Graduate Research</span>
+                </div>
+                <p class="project-desc">
+                    Conducted diagnostic audits on machine learning pipelines to detect target leakage in synthetic labor datasets. Identified leakage driving inflated baseline accuracy (ROC-AUC 0.9934) down to an unbiassed null baseline (0.4991), validating model behavior through SHAP value interpretability.
+                </p>
+                <div class="project-tech">
+                    <span class="skill-tag highlight">Python</span>
+                    <span class="skill-tag highlight">XGBoost</span>
+                    <span class="skill-tag highlight">SHAP</span>
+                    <span class="skill-tag">Diagnostic Validation</span>
+                </div>
+            </div>
+
+            <!-- Enterprise Architecture Project -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Enterprise Identity & Access Management Framework</h3>
+                    <span class="project-badge">System Architecture</span>
+                </div>
+                <p class="project-desc">
+                    Architected and deployed enterprise-grade IAM systems and cloud infrastructures, incorporating custom ontology models to enforce role-based access control and strict data governance across distributed services.
+                </p>
+                <div class="project-tech">
+                    <span class="skill-tag highlight">IAM</span>
+                    <span class="skill-tag highlight">Ontologies</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Cloud Architecture</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Architecture & Governance</div>
+                <ul class="skills-list">
+                    <li class="skill-tag highlight">System Architecture</li>
+                    <li class="skill-tag highlight">IAM</li>
+                    <li class="skill-tag highlight">Ontologies</li>
+                    <li class="skill-tag">Cloud Deployments</li>
+                    <li class="skill-tag">Program Management</li>
+                </ul>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Data Science & Analytics</div>
+                <ul class="skills-list">
+                    <li class="skill-tag highlight">Python (Pandas, Scikit-Learn)</li>
+                    <li class="skill-tag">XGBoost</li>
+                    <li class="skill-tag">SHAP Interpretability</li>
+                    <li class="skill-tag">Econometric Modeling</li>
+                    <li class="skill-tag">K-Means Clustering</li>
+                </ul>
+            </div>
+
+            <div class="skills-group">
+                <div class="skills-group-title">Software Engineering</div>
+                <ul class="skills-list">
+                    <li class="skill-tag">Java</li>
+                    <li class="skill-tag">Angular</li>
+                    <li class="skill-tag">REST APIs</li>
+                    <li class="skill-tag">Git / GitHub Actions</li>
+                </ul>
+            </div>
         </section>
 
         <section>
             <h2>Connect</h2>
             <div class="links">
-                <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub Profile</a>
-                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">LinkedIn</a>
+                <a href="https://github.com/cakKramer" target="_blank">GitHub</a>
                 <a href="mailto:your.email@example.com">Email</a>
             </div>
         </section>
