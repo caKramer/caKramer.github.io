@@ -197,6 +197,44 @@
         .links a:hover {
             text-decoration: underline;
         }
+
+        .grid-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+        .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent-color);
+    }
+
+    .card ul {
+      padding-left: 1.25rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .card li + li {
+      margin-top: 0.4rem;
+    }
     </style>
 </head>
 <body>
@@ -349,19 +387,89 @@
 
         <section>
             <h2>Projects</h2>
-            <ol>
-              <li><a href="https://github.com/caKramer/Neuro-spicy-helper-LLM">Neuro-Spicy Helper : LLM, Python</a></li>
-              <li><a href="https://github.com/caKramer/Optimizing-Electric-Vehicle-Charging-Station-Placement">Optimizing Electric Vehicle Charging Station Placement : Betweenness Centrality, MILP, Python</a></li>
-              <li><a href="https://github.com/caKramer/Childcare-Prices">Childcare Prices : Python, EDA, visualizations </a></li>
-              <li><a href="https://github.com/caKramer/Python-data-gathering">Python Data Gathering : Python, csv, API, website scraping </a></li>
-              <li><a href="https://github.com/caKramer/Housing-Price-Prediction">Housing Price Prediction : R, EDA, visualizations, modeling </a></li>
-              <li><a href="https://github.com/caKramer/NYPD-Arrest-Records">NYPD Arrest Records : Python, EDA, visualizations, modeling </a></li>
-              <li><a href="https://github.com/caKramer/EmployeeAttrition">Employee Attrition : Python, EDA, modeling </a></li>
-              <li><a href="https://github.com/caKramer/GlobalAIHiring">Global AI Hiring : Python, visualizations, modeling </a></li>
-              <li><a href="https://github.com/caKramer/Predicting-Movie-Success">Predicting Movie Success : Python, EDA, visualizations, modeling </a></li>
-              <li><a href="https://github.com/caKramer/RAG">RAG : Python </a></li>
-               <li><a href="https://github.com/caKramer/Upstream-Supply-Chain-Optimization">Upstream-Supply-Chain-Optimization : Case Study </a></li> 
-            </ol>
+          <main class="grid-container">
+    <article class="card">
+      <h2>Python-data-gathering: Python</h2>
+      <ul>
+        <li>Different ways to gather data using python including .csv ingest, API pull and website scraping with BeautifulSoup</li>
+        <li>This is a lead in for Predicting-Movie-Success</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Housing-Price-Prediction: R</h2>
+      <ul>
+        <li>Utilizing a dataset of housing prices to practice statistical correlation, multiple regression to infer sale prices</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>NYPD-Arrest-Records: Python</h2>
+      <ul>
+        <li>Determining if specific demographic signature varied across NYC’s five boroughs</li>
+        <li>Includes EDA, visualizations, and modeling</li> 
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>EmployeeAttrition: Python</h2>
+      <ul>
+        <li>Trying to predict employee turnover; includes EDA, visualizations, and modeling</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>GlobalAIHiring: Python</h2>
+      <ul>
+        <li>Predicting annual salary for job postings and salary increase due to AI skills, prediction salary for a data scientist and assessing career growth, security and automation risks</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Predicting -Movie-Success: Python</h2>
+      <ul>
+        <li>Investigating the relationship between a movie’s production budget and reception by audiences and critics to determine if a large budget can predict movie success</li>
+        <li>Includes EDA, datasource merging, visualizations, feature engineering and modeling</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>RAG: Python</h2>
+      <ul>
+        <li>RAG implementation using Hugging Face and Beautiful Soup; utilized FAISS for similarity search for vectors</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Neuro-SpicyHelper_LLM: Python</h2>
+      <ul>
+        <li>Application containing an LLM to help neurodivergent individuals with interoception and executive dysfunction issues</li>
+        <li>Includes Streamlit application that serves a fully fine-tuned model</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Childcare-Prices: Python</h2>
+      <ul>
+        <li>Focus on storytelling with data. Contains EDA and visualizations</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Upstream-Supply-Chain-Optimization: CASE STUDY</h2>
+      <ul>
+        <li>Case study on Home Depot supply and delivery chain to understand bottlenecks and provide optimization ideas; includes identifying data needs and possible models for use</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Optimizing Electric Vehicle Charging Stations Placement : Python</h2>
+      <ul>
+        <li>P-Median Facility Location Problem formulated as a Mixed-Integer Linear Program (MILP)</li>
+        <li>Uses a composite demand weight calculated by combining population, betweenness centrality, and median income to determine most optimal location for EV charging stations</li>
+      </ul>
+    </article>
+  </main>
         </section>
 
         <section>
